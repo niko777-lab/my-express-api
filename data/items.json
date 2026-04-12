@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "category": "electronics",
+        "description": "Gaming laptop",
+        "rating": 5,
+        "createdAt": "2026-01-01"
+    },
+    {
+        "id": 2,
+        "name": "Phone",
+        "category": "electronics",
+        "description": "Gaming phone",
+        "rating": 5,
+        "createdAt": "2026-01-01"
+    },
+    {
+        "id": 3,
+        "name": "Headphones",
+        "category": "electronics",
+        "description": "Gaming headphones",
+        "rating": 5,
+        "createdAt": "2026-01-01"
+    },
+    {
+        "id": 4,
+        "name": "Mouse",
+        "category": "electronics",
+        "description": "Gaming mouse",
+        "rating": 5,
+        "createdAt": "2026-01-01"
+    }
+]

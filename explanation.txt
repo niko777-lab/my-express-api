@@ -1,0 +1,109 @@
+
+# ეს ინგლისურად რას აკეთებს get post put delete  და როგორ მუშაობს პროექტი
+REST API METHODS EXPLANATION
+
+GET
+Used to retrieve data from the server.
+Example:
+GET /items → returns all items
+GET /items/:id → returns one specific item
+
+POST
+Used to create new data.
+Example:
+POST /items
+Sends data in body and creates a new item in database.
+
+PUT
+Used to update existing data.
+Example:
+PUT /items/:id
+Updates the item with given id.
+
+DELETE
+Used to remove data.
+Example:
+DELETE /items/:id
+Deletes the item with given id.
+
+
+HOW PROJECT WORKS
+
+1. Client (Postman) sends request
+2. Request goes to routes
+3. Routes call controller functions
+4. Controllers use ReadFile to get data
+5. Controllers modify data if needed
+6. Controllers use WriteFile to save data
+7. Server sends response back
+
+
+EXAMPLE FLOW (CREATE ITEM)
+
+POST /items
+ goes to route
+ calls createItem controller
+ controller validates data
+ reads file
+ adds new item
+ writes file
+ returns created item
+
+
+ERRORS
+
+400 → Bad request (wrong data)
+404 → Not found (item does not exist)
+500 → Server error
+
+# ეს ქართულად რას აკეთებს get post put delete  და როგორ მუშაობს პროექტი
+
+GET
+გამოიყენება იმისთვის რომ წამოვიგოთ ინფო სერვერიდან
+მაგალითი:
+GET /items აბრუნებს ყველა items
+GET /items/:id აბრუნებს ერთ items id მიხედვით
+
+POST
+გამოიყენბეა იმისთვის რომ შევქმნათ ახალი ინფოს ბაზა  რომელიც შეინახება data ფოლდერის item,json ფაილში
+Example:
+POST /items
+აგზავნის ინფოს body ში და ქმნის ახალ ელემენტს ბაზაში
+
+PUT
+გამოიყენება რომ გავანახოლოთ უკვე შექმნილი ბაზა
+Example:
+PUT /items/:id
+განახლება იმ item რომესიც id საც მიუთითებთ
+
+DELETE
+გამოიყენბა ინფოს წასაშლელად
+Example:
+DELETE /items/:id
+შლის იმ item რომლის idც არის მითითებული
+
+როგორ მუშაობს პროექტი
+
+1. Client გზავნის მოთხოვნას POSTMAN 
+2. რექვესტი მიდის ROUTES 
+3. Routes ეძახის მმართავ ფუნქციებს
+4. Controllers იყენებ READFILE რომ აიღონ ეს ინფო
+5. Controllers ანახლებ ინფო თუ არის საჭირო
+6. Controllers იყენებ WriteFile რომ შეინახონ ინფო
+7. და SERVER აბრუნებს პასუხს უკან
+
+
+POST /items
+ მიდის ROUTE
+ ეძახის createItem controller
+ controller validates ინფოს
+ წაიკითხავს
+ დამატებს ახალ item
+ წაიკითხავს ფაილს
+ დაბრუნებს შემნილ item
+
+ERRORS
+
+400 → Bad request (არასწორი ინფო )
+404 → Not found (არა არსებობს)
+500 → Server error სერვერის პრობლემაა

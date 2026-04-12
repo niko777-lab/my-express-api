@@ -1,0 +1,29 @@
+# Custom REST API  ## items project
+
+## Description
+This project is a REST API built with Node.js and Express.
+It uses a JSON file as a database instead of MongoDB.
+
+## How it works
+- Data is stored in data/items.json
+- ReadFile reads data
+- WriteFile updates data
+- Controllers handle logic
+- Routes handle endpoints
+
+## Endpoints
+
+GET /items → get all items  
+GET /items/:id → get one item  
+POST /items → create item  
+PUT /items/:id → update item  
+DELETE /items/:id → delete item  
+
+## Validation
+- All fields are required
+- Rating must be a number
+
+## Error Handling
+- 400 → bad request
+- 404 → not found
+- 500 → server error
