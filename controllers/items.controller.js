@@ -29,7 +29,7 @@ export const getItemById = async (req, res) => {
         // find item with matching id
         const item = items.find(i => i.id === id);
 
-        // if not found → 404 error
+        // if not found  404 error
         if (!item) {
             return res.status(404).json({ message: "Item not found" });
         }
@@ -95,7 +95,7 @@ export const updateItem = async (req, res) => {
             return res.status(404).json({ message: "Item not found" });
         }
 
-        // update item (merge old + new data)
+        // update item ( old + new data)
         items[index] = { ...items[index], ...req.body };
 
         await WriteFile(DB, items);
@@ -120,7 +120,7 @@ export const deleteItem = async (req, res) => {
         // remove item from array
         const filtered = items.filter(i => i.id !== id);
 
-        // if nothing removed → not found
+        // if nothing removed  not found
         if (filtered.length === items.length) {
             return res.status(404).json({ message: "Item not found" });
         }

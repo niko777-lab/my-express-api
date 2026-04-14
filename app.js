@@ -1,16 +1,21 @@
 import express from "express";
+import dotenv from "dotenv";
 import itemsRouter from "./routes/items.route.js";
+
+
+dotenv.config();
 
 const app = express();
 
-// middleware → allows server to read JSON body from requests
+// middleware
 app.use(express.json());
 
-// routes → all /items requests go to itemsRouter
+// routes
 app.use("/items", itemsRouter);
 
-// server → runs on port 3000
-const PORT = 3000;
+// use PORT from .env
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
